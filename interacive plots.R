@@ -4,10 +4,10 @@ library(plotly)
 code<-vector()
 for(i in 1:55){
   
-  state<-read_excel("C:\\Users\\mpand\\COVID19\\2020 03 26 - By state.xlsx", sheet=i)
+  state<-read_excel("C:\\Users\\mpand\\COVID19\\Data\\2020 03 26 - By state.xlsx", sheet=i)
   code[i]<-noquote(state[[1]][1])
   nam<-paste("state.dat.",code[i],sep="")
-  assign(nam,read_excel("C:\\Users\\mpand\\COVID19\\2020 03 26 - By state.xlsx", sheet=i))
+  assign(nam,read_excel("C:\\Users\\mpand\\COVID19\\Data\\2020 03 26 - By state.xlsx", sheet=i))
 }
 
 #Now all 50 states are imported and saved as state.dat."States two digit code"
